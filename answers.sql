@@ -4,10 +4,10 @@
 -- Question 1: Drop the IdxPhone index from the customers table.
 DROP INDEX IdxPhone ON customers;
 
--- Question 2: Create the user bob restricted to localhost.
+-- Question 2: Create bob with access restricted to localhost.
 CREATE USER 'bob'@'localhost' IDENTIFIED BY 'S$cu3r3!';
 
--- Question 3: Grant INSERT privilege on the salesDB database to bob.
+-- Question 3: Grant bob INSERT permission on all tables in salesDB.
 GRANT INSERT ON salesDB.* TO 'bob'@'localhost';
 
 -- Question 4: Change bob's password.
